@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build" default="copyDist" basedir=".">
+    <property name="dist.dir" value="dist"/>
+    <property name="jar.file.name" value="bhs-spring-utils-1.0.jar"/>
+    <property name="classes.dir" value="bin"/>
+
+    <target name="dist" description="generate the distribution">
+        <mkdir dir="${dist.dir}" />
+        <jar jarfile="${dist.dir}/${jar.file.name}" basedir="${classes.dir}" />
+    </target>
+    
+    <target name="copyDist" description="copy jar file to other projects" depends="dist">
+    </target>
+</project>
+ 
